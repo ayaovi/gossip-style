@@ -16,5 +16,8 @@ default: classes
 
 classes: $(CLASSES:.java=.class)
 
+run: 
+	java -cp $(BIN)/test:$(JUNIT) org.junit.runner.JUnitCore ChannelTests
+
 clean: 
 	$(RM) -rf $(BIN)/*
